@@ -28,7 +28,7 @@ const AboutSection = () => {
             rel="noreferrer noopener"
             aria-label="Lambton College (opens in a new tab)"
           >
-            Lambton College, Missisauga
+            Lambton College, Mississauga
           </a>
           , while actively working on projects that combine my technical
           expertise with user-centered design principles. My past work includes
