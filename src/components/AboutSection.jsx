@@ -18,9 +18,9 @@ const AboutSection = () => {
           interfaces while ensuring robust back-end architecture to support
           smooth functionality.
         </p>
+
         <p className="mb-4">
-          Currently, I'm a student pursuing Full Stack Software Development at{" "}
-          {}
+          I recently graduated in Full Stack Software Development from{" "}
           <a
             className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
             href="https://www.lambtoncollege.ca/"
@@ -28,14 +28,19 @@ const AboutSection = () => {
             rel="noreferrer noopener"
             aria-label="Lambton College (opens in a new tab)"
           >
-            Lambton College, Mississauga
+            Lambton College
           </a>
-          , while actively working on projects that combine my technical
-          expertise with user-centered design principles. My past work includes
-          e-learning platforms, inventory management systems, and online
-          bookstores, all built with efficiency, security, and user experience
-          in mind.
+          . Currently, I am working as a Technical Support Advisor at Concentrix
+          in Halifax, Canada, where I apply my problem-solving skills to resolve
+          technical issues and enhance user experiences.
         </p>
+
+        <p className="mb-4">
+          My past work includes e-learning platforms, inventory management
+          systems, and online bookstores, all built with efficiency, security,
+          and user experience in mind.
+        </p>
+
         <p className="mb-4">
           Beyond development, I'm deeply curious about the intersection of
           technology and human interaction, always exploring ways to make
@@ -44,7 +49,7 @@ const AboutSection = () => {
 
         <p>
           When I'm not coding, you'll find me reading, gaming, exploring new
-          receipe, or brainstorming innovative ways to enhance digital
+          recipes, or brainstorming innovative ways to enhance digital
           experiences.
         </p>
       </div>
