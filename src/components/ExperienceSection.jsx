@@ -12,6 +12,20 @@ const ExperienceSection = () => {
       <div>
         <ol className="group/list">
           <ExperienceItem
+            period="Mar 2026 — Present"
+            title="Technical Support Advisor II"
+            company="Concentrix"
+            description="Provided advanced technical support by diagnosing and resolving hardware, software, networking, and system-related issues, handling 50–60 cases weekly while maintaining high customer satisfaction and minimal downtime. Documented 200+ incidents and troubleshooting workflows monthly, improving knowledge base accuracy and reducing resolution time. Collaborated with cross-functional teams to identify recurring issues and contribute to system enhancements, helping reduce repeat incidents and improve overall service efficiency. Analyzed support trends to proactively suggest process improvements and streamline issue resolution. Delivered clear, step-by-step troubleshooting guidance and end-user support, improving first-call resolution rates and enhancing system utilization while reducing repeat inquiries."
+            technologies={[
+              "Technical Support",
+              "Troubleshooting",
+              "System Analysis",
+              "Documentation",
+              "Customer Support",
+            ]}
+          />
+
+          <ExperienceItem
             period="2022 — 2023"
             title="Full Stack Web Developer"
             company="InDesign Media"
