@@ -30,15 +30,18 @@ const AboutSection = () => {
           >
             Lambton College
           </a>
-          . Currently, I am working as a Technical Support Advisor at Concentrix
-          in Halifax, Canada, where I apply my problem-solving skills to resolve
+          . Currently, I am working as a Technical Support Advisor at{" "}
+          <a
+            className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+            href="https://www.concentrix.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Concentrix (opens in a new tab)"
+          >
+            Concentrix
+          </a>
+          {" "}in Halifax, Canada, where I apply my problem-solving skills to resolve
           technical issues and enhance user experiences.
-        </p>
-
-        <p className="mb-4">
-          My past work includes e-learning platforms, inventory management
-          systems, and online bookstores, all built with efficiency, security,
-          and user experience in mind.
         </p>
 
         <p className="mb-4">

@@ -15,6 +15,7 @@ const ExperienceSection = () => {
             period="Mar 2026 — Present"
             title="Technical Support Advisor II"
             company="Concentrix"
+            href="https://www.concentrix.com/"
             description="Provided advanced technical support by diagnosing and resolving hardware, software, networking, and system-related issues, handling 50–60 cases weekly while maintaining high customer satisfaction and minimal downtime. Documented 200+ incidents and troubleshooting workflows monthly, improving knowledge base accuracy and reducing resolution time. Collaborated with cross-functional teams to identify recurring issues and contribute to system enhancements, helping reduce repeat incidents and improve overall service efficiency."
             technologies={[
               "Technical Support",
@@ -92,6 +93,7 @@ const ExperienceItem = ({
   period,
   title,
   company,
+  href,
   description,
   technologies,
 }) => {
@@ -110,7 +112,7 @@ const ExperienceItem = ({
             <div>
               <a
                 className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                href="#"
+                href={href}
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={`${title} at ${company} (opens in a new tab)`}
