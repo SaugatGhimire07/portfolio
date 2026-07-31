@@ -5,7 +5,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import WritingSection from "./components/WritingSection";
 
-const PortfolioPage = () => {
+const PortfolioPage = ({ onViewArchive }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const PortfolioPage = () => {
             <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
               <AboutSection />
               <ExperienceSection />
-              <ProjectsSection />
+              <ProjectsSection onViewArchive={onViewArchive} />
               <WritingSection />
             </main>
           </div>
