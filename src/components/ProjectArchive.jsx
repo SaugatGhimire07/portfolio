@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowIcon, ExternalLinkIcon } from "./icons";
-import { projects } from "../data/projects";
+import { projectsByYear } from "../data/projects";
 import { getLinkLabel } from "../utils/linkLabel";
 
 export default function ProjectArchive({ onBack }) {
@@ -38,7 +38,7 @@ export default function ProjectArchive({ onBack }) {
               </tr>
             </thead>
             <tbody>
-              {projects.map((p, i) => (
+              {projectsByYear.map((p, i) => (
                 <tr
                   key={`${p.title}-${i}`}
                   className="border-b border-slate-300/10 last:border-none hover:bg-slate-800/30"

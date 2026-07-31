@@ -1,7 +1,7 @@
 import quizCraftImage from "../assets/02.jpg";
 import maplyticsImage from "../assets/03.jpg";
 import spotifyProfileImage from "../assets/04.jpg";
-import nextAcademyImage from "../assets/05.jpg";
+import debunkerImage from "../assets/05.jpg";
 
 // Single source of truth for all projects. ProjectsSection shows the first
 // 4 entries as featured cards; ProjectArchive lists every entry in a table.
@@ -46,7 +46,7 @@ export const projects = [
     description:
       "eLearning platform designed to equip learners with in-demand technical skills in coding, cybersecurity, DevOps, and more.",
     link: null,
-    image: nextAcademyImage,
+    image: null,
     imageAlt: "Next Academy eLearning platform",
     technologies: ["Java"],
   },
@@ -57,8 +57,8 @@ export const projects = [
     description:
       "Fact-checking tool that retrieves supporting evidence for a claim and shows its reasoning, rather than guessing based on writing style. Uses a retrieval pipeline with a stance-classification model to verify claims against sourced evidence.",
     link: "https://github.com/SaugatGhimire07/fake-news-debunker",
-    image: null,
-    imageAlt: null,
+    image: debunkerImage,
+    imageAlt: "Fake News Debunker",
     technologies: ["Python", "scikit-learn", "Hugging Face Transformers", "pandas"],
   },
   {
@@ -84,3 +84,9 @@ export const projects = [
     technologies: ["Python", "pandas", "NumPy", "scikit-learn"],
   },
 ];
+
+// Newest first. ProjectsSection and ProjectArchive both read from this so
+// they stay in sync; edit `projects` above to add/update entries.
+export const projectsByYear = [...projects].sort(
+  (a, b) => (b.year ?? -Infinity) - (a.year ?? -Infinity)
+);
