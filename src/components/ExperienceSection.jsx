@@ -16,27 +16,39 @@ const ExperienceSection = () => {
             title="Technical Support Advisor II"
             company="Concentrix"
             href="https://www.concentrix.com/"
-            description="Provided advanced technical support by diagnosing and resolving hardware, software, networking, and system-related issues, handling 50–60 cases weekly while maintaining high customer satisfaction and minimal downtime. Documented 200+ incidents and troubleshooting workflows monthly, improving knowledge base accuracy and reducing resolution time. Collaborated with cross-functional teams to identify recurring issues and contribute to system enhancements, helping reduce repeat incidents and improve overall service efficiency."
+            description="Resolved 50–60 hardware, software, networking, and application support cases weekly, maintaining high customer satisfaction scores and minimal system downtime across enterprise environments. Documented 200+ incidents and troubleshooting workflows monthly into knowledge management articles, improving knowledge base accuracy and reducing average resolution time. Performed root cause analysis on recurring technical issues in collaboration with cross-functional teams, driving system enhancements that reduced repeat incidents. Delivered step-by-step troubleshooting guidance to end users, raising first-call resolution rates."
             technologies={[
-              "Technical Support",
+              "Technical Documentation",
+              "Help Desk Support",
               "Troubleshooting",
-              "System Analysis",
-              "Documentation",
+              "Root Cause Analysis",
               "Customer Support",
             ]}
           />
 
           <ExperienceItem
-            period="2022 — 2023"
-            title="Full Stack Web Developer"
-            company="InDesign Media"
-            description="Built and optimized web applications using HTML, CSS, JavaScript, and Spring Boot to enhance functionality and performance. Collaborated with cross-functional teams to design and implement RESTful APIs, ensuring seamless data integration and a smooth user experience. Conducted data quality checks, debugging, and performance tuning to improve system reliability. Created technical documentation to support deployment processes, streamlining maintenance efforts."
+            period="Feb 2022 — Oct 2023"
+            title="Full Stack Developer"
+            company="InDesign Media Pvt. Ltd."
+            description="Designed, built, and tested full stack web applications using JavaScript, React.js, and Node.js, shipping 3+ feature enhancements that improved usability and performance. Developed and integrated RESTful APIs across internal systems, reducing response times by 15%, and engineered SQL database schemas that improved data retrieval efficiency by 15%. Collaborated in Agile sprints with cross-functional teams, translating requirements into scalable technical solutions and accelerating feature delivery cycles by 20%. Debugged recurring application and data-flow issues through root cause analysis, improving system reliability by 20%."
             technologies={[
               "JavaScript",
-              "MongoDB",
-              "React",
+              "React.js",
+              "Node.js",
+              "SQL",
               "RESTful APIs",
-              "Spring Boot",
+              "Python",
+            ]}
+          />
+
+          <ExperienceItem
+            period="Jan 2021 — Feb 2022"
+            title="Student Services Department Officer"
+            company="Itahari International College"
+            description="Advised 300+ students on academic and non-academic matters, resolving grievances and coordinating support services across 4 departments. Organized orientation programs and extracurricular events for cohorts of 200+ incoming students, improving early-semester engagement. Maintained accurate records for 600+ active students, ensuring compliance with college policies and data accuracy standards. Analyzed student services data to identify trends and recommend improvements adopted by 5 departments."
+            technologies={[
+              "Student Advising and Support",
+              "Data Analysis and Decision Making",
             ]}
           />
 
@@ -44,14 +56,13 @@ const ExperienceSection = () => {
             period="Aug — Nov 2020"
             title="Full Stack Developer Intern"
             company="Quality IT Solution"
-            description="Built and maintained critical backend components using Laravel to support web applications across the entire product. Worked closely with cross-functional teams, including developers, designers, and product managers, to implement scalable solutions and ensure seamless integration between frontend and backend systems. Contributed to optimizing application performance and advocating for best practices in web development to enhance accessibility and user experience."
+            description="Developed user-facing features and back-end APIs using Laravel, optimizing functionality and performance across production web applications. Collaborated with a 7-member graphic design team to translate UI/UX designs into responsive, interactive web components. Implemented data protection standards and security best practices, improving system efficiency by 92%. Conducted debugging, code reviews, and pre-deployment testing on relational database schemas."
             technologies={[
               "Laravel",
               "PHP",
               "JavaScript",
               "PostgreSQL",
-              "WordPress",
-              "HTML&CSS",
+              "HTML & CSS",
             ]}
           />
         </ol>
