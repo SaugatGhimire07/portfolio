@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowIcon, ExternalLinkIcon } from "./icons";
 import { projectsByYear } from "../data/projects";
 import { getLinkLabel } from "../utils/linkLabel";
 
 export default function ProjectArchive({ onBack }) {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      requestAnimationFrame(() => {
+        setMousePosition({
+          x: event.clientX,
+          y: event.clientY,
+        });
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-900 font-sans text-slate-400 antialiased">
+      {/* Gradient overlay */}
+      <div
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+          zIndex: 9999,
+        }}
+      />
+
       <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-24">
         <button
           type="button"
@@ -41,7 +66,7 @@ export default function ProjectArchive({ onBack }) {
               {projectsByYear.map((p, i) => (
                 <tr
                   key={`${p.title}-${i}`}
-                  className="border-b border-slate-300/10 last:border-none hover:bg-slate-800/30"
+                  className="border-b border-slate-300/10 last:border-none"
                 >
                   <td className="py-4 pr-4 align-top text-sm text-slate-500">{p.year}</td>
                   <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
