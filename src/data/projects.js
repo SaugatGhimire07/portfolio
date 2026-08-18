@@ -1,7 +1,7 @@
 import quizCraftImage from "../assets/02.jpg";
 import maplyticsImage from "../assets/03.jpg";
 import spotifyProfileImage from "../assets/04.jpg";
-import debunkerImage from "../assets/05.jpg";
+import debunkerImage from "../assets/05.png";
 import nostalgiaRadioImage from "../assets/6.jpeg";
 
 // Single source of truth for all projects. ProjectsSection shows the first
