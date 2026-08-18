@@ -9,7 +9,7 @@ import nostalgiaRadioImage from "../assets/6.jpeg";
 export const projects = [
   {
     title: "Nostalgia Radio",
-    year: 2025,
+    year: 2026,
     madeAt: "Personal Project",
     description:
       "A nostalgic Nepali music radio web app that blends cinematic visuals, a custom music player, and Nepal-inspired design to recreate the feeling of old Kathmandu streets and classic Nepali melodies.",
