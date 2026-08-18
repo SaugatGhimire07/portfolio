@@ -2,10 +2,22 @@ import quizCraftImage from "../assets/02.jpg";
 import maplyticsImage from "../assets/03.jpg";
 import spotifyProfileImage from "../assets/04.jpg";
 import debunkerImage from "../assets/05.jpg";
+import nostalgiaRadioImage from "../assets/6.jpeg";
 
 // Single source of truth for all projects. ProjectsSection shows the first
 // 4 entries as featured cards; ProjectArchive lists every entry in a table.
 export const projects = [
+  {
+    title: "Nostalgia Radio",
+    year: 2025,
+    madeAt: "Personal Project",
+    description:
+      "A nostalgic Nepali music radio web app that blends cinematic visuals, a custom music player, and Nepal-inspired design to recreate the feeling of old Kathmandu streets and classic Nepali melodies.",
+    link: "https://nostalgia-radio-alpha.vercel.app/",
+    image: nostalgiaRadioImage,
+    imageAlt: "Nostalgia Radio application",
+    technologies: ["Next.js", "React", "TypeScript", "CSS", "YouTube API"],
+  },
   {
     title: "Quiz Craft",
     year: 2025,
@@ -56,7 +68,7 @@ export const projects = [
     madeAt: "Personal Project",
     description:
       "Fact-checking tool that retrieves supporting evidence for a claim and shows its reasoning, rather than guessing based on writing style. Uses a retrieval pipeline with a stance-classification model to verify claims against sourced evidence.",
-    link: "https://github.com/SaugatGhimire07/fake-news-debunker",
+    link: "https://fake-news-debunker-h8byas7dbwzxnm6wy2rtl7.streamlit.app/",
     image: debunkerImage,
     imageAlt: "Fake News Debunker",
     technologies: ["Python", "scikit-learn", "Hugging Face Transformers", "pandas"],
