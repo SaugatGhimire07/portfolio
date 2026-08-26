@@ -3,10 +3,22 @@ import maplyticsImage from "../assets/03.jpg";
 import spotifyProfileImage from "../assets/04.jpg";
 import debunkerImage from "../assets/05.png";
 import nostalgiaRadioImage from "../assets/6.jpeg";
+import kycCaseStudyImage from "../assets/07.png";
 
 // Single source of truth for all projects. ProjectsSection shows the first
 // 4 entries as featured cards; ProjectArchive lists every entry in a table.
 export const projects = [
+  {
+    title: "Meridian KYC Account Opening",
+    year: 2026,
+    madeAt: "Personal Project",
+    description:
+      "Designed a high-fidelity, responsive 8-screen KYC account-opening flow for a financial services application, covering account selection, personal details, document verification, review/consent, and account confirmation.",
+    link: "/kyc-case-study",
+    image: kycCaseStudyImage,
+    imageAlt: "Meridian KYC account-opening flow, account type selection screen",
+    technologies: ["Figma", "UI/UX", "Responsive Design", "WCAG"],
+  },
   {
     title: "Nostalgia Radio",
     year: 2026,

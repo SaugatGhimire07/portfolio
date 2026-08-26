@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { ArrowIcon, ExternalLinkIcon } from "./icons";
 import { projectsByYear } from "../data/projects";
 import { getLinkLabel } from "../utils/linkLabel";
+import { isInternalLink, handleInternalLinkClick } from "../utils/internalNav";
 
-export default function ProjectArchive({ onBack }) {
+export default function ProjectArchive({ onBack, onNavigate }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -90,11 +91,12 @@ export default function ProjectArchive({ onBack }) {
                     {p.link && (
                       <a
                         href={p.link}
-                        target="_blank"
-                        rel="noreferrer noopener"
+                        target={isInternalLink(p.link) ? undefined : "_blank"}
+                        rel={isInternalLink(p.link) ? undefined : "noreferrer noopener"}
+                        onClick={isInternalLink(p.link) ? (e) => handleInternalLinkClick(e, p.link, onNavigate) : undefined}
                         className="group/link inline-flex items-center text-sm text-slate-400 hover:text-teal-300"
                       >
-                        <span>{getLinkLabel(p.link)}</span>
+                        <span>{isInternalLink(p.link) ? "View case study" : getLinkLabel(p.link)}</span>
                         <ExternalLinkIcon className="inline-block h-3.5 w-3.5 shrink-0 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 ml-1" />
                       </a>
                     )}

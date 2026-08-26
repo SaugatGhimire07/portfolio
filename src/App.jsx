@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import PortfolioPage from "./PortfolioPage";
 import ProjectArchive from "./components/ProjectArchive";
+import KycCaseStudy from "./components/KycCaseStudy";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(() => window.location.pathname);
@@ -23,10 +24,14 @@ function App() {
   };
 
   if (currentPath === "/archive") {
-    return <ProjectArchive onBack={() => navigateTo("/")} />;
+    return <ProjectArchive onBack={() => navigateTo("/")} onNavigate={navigateTo} />;
   }
 
-  return <PortfolioPage onViewArchive={() => navigateTo("/archive")} />;
+  if (currentPath === "/kyc-case-study") {
+    return <KycCaseStudy onBack={() => navigateTo("/")} />;
+  }
+
+  return <PortfolioPage onViewArchive={() => navigateTo("/archive")} onNavigate={navigateTo} />;
 }
 
 export default App;

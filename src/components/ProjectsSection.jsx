@@ -2,10 +2,11 @@ import React from "react";
 import SectionHeading from "../SectionHeading";
 import { ExternalLinkIcon } from "./icons";
 import { projectsByYear } from "../data/projects";
+import { isInternalLink, handleInternalLinkClick } from "../utils/internalNav";
 
 const FEATURED_COUNT = 4;
 
-const ProjectsSection = ({ onViewArchive }) => {
+const ProjectsSection = ({ onViewArchive, onNavigate }) => {
   const featuredProjects = projectsByYear.slice(0, FEATURED_COUNT);
 
   return (
@@ -28,6 +29,7 @@ const ProjectsSection = ({ onViewArchive }) => {
                   src: project.image,
                 }}
                 technologies={project.technologies}
+                onNavigate={onNavigate}
               />
             </li>
           ))}
@@ -59,8 +61,10 @@ const ProjectItem = ({
   link,
   imageProps,
   technologies,
+  onNavigate,
 }) => {
   const hasImage = Boolean(imageProps?.src);
+  const internal = isInternalLink(link);
 
   return (
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
@@ -71,9 +75,10 @@ const ProjectItem = ({
           <a
             className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
             href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={`${title} (opens in a new tab)`}
+            target={internal ? undefined : "_blank"}
+            rel={internal ? undefined : "noreferrer noopener"}
+            aria-label={internal ? title : `${title} (opens in a new tab)`}
+            onClick={internal ? (e) => handleInternalLinkClick(e, link, onNavigate) : undefined}
           >
             <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
             <span>
